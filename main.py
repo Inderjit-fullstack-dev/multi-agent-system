@@ -1,9 +1,9 @@
-import os
 
 from dotenv import load_dotenv
 
-from core_concept import demo_basic_chain
+from core_concept import demo_basic_chain, new_way_to_init_model
 
+# it will automaticaly load the env variables
 load_dotenv()
 
 from langchain_anthropic import ChatAnthropic
@@ -11,11 +11,6 @@ from langchain_openai import ChatOpenAI
 
 
 def main():
-    # openai_key = os.getenv("OPENAI_API_KEY")
-    # anthropic_key = os.getenv("ANTHROPIC_API_KEY")
-
-    # print(f"OpenAI API Key loaded: {bool(openai_key)}")
-    # print(f"Anthropic API Key loaded: {bool(anthropic_key)}")
 
     # llm = ChatOpenAI(model="gpt-4o-mini")
     # # Use a valid Claude model name
@@ -29,7 +24,9 @@ def main():
     # print(response_openai.content)
     # print(response_anthropic.content)
 
-    demo_basic_chain()
+    #demo_basic_chain()
+    #
+    new_way_to_init_model()
 
 
 if __name__ == "__main__":
